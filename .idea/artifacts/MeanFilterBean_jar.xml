@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MeanFilterBean:jar">
+    <output-path>$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/BeanBox/BeanBox/jars</output-path>
+    <root id="archive" name="MeanFilterBean.jar">
+      <element id="module-output" name="MeanFilterBean" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai/jai.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai/jai_core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai/jai_codec.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai/jai-1_1-mr-doc.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai/mlibwrapper_jai.jar" path-in-jar="/" />
+      <element id="library" level="project" name="jai" />
+    </root>
+  </artifact>
+</component>

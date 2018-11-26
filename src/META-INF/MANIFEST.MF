@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+
+Name: Filters/FileChooser.class
+Java-Bean: true
+
+Name: Filters/PlanarImageConverter.class
+Java-Bean: true
+
+Name: Filters/Threshold.class
+Java-Bean: true
+
+Name: Filters/PlanarImageDisplay.class
+Java-Bean: true
+
+
+
+

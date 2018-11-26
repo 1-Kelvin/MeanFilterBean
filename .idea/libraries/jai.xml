@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jai">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Desktop/Semester 5/SoftwareArchitekturen/libs/jai" recursive="false" type="SOURCES" />
+  </library>
+</component>
