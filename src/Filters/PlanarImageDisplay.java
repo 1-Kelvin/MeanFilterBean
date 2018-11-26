@@ -21,15 +21,21 @@ public class PlanarImageDisplay extends Canvas implements OnImagePropertyChangeL
     @Override
     public void onImagePropertyChanged(OnImageChangeEvent event) {
         planarImage = event.getPlanarImage();
-        repaint();
+
+        if(planarImage != null){
+            repaint();
+        }
         fireEvent();
     }
 
     @Override
     public void paint(Graphics g) {
-        BufferedImage bufferedImage = planarImage.getAsBufferedImage();
-        setSize(bufferedImage.getWidth(), bufferedImage.getHeight());
-        g.drawImage(bufferedImage, 0, 0, bufferedImage.getWidth(), bufferedImage.getHeight(), null);
+        if(planarImage != null) {
+
+            BufferedImage bufferedImage = planarImage.getAsBufferedImage();
+            setSize(bufferedImage.getWidth(), bufferedImage.getHeight());
+            g.drawImage(bufferedImage, 0, 0, bufferedImage.getWidth(), bufferedImage.getHeight(), null);
+        }
     }
 
     private void fireEvent() {
