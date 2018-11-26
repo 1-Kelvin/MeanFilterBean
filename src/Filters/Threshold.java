@@ -72,6 +72,7 @@ public class Threshold extends Label implements OnImagePropertyChangeListener {
     }
 
     public void setMinimum(double minimum) {
+        fireEvent();
         this.minimum = minimum;
     }
 
@@ -80,6 +81,7 @@ public class Threshold extends Label implements OnImagePropertyChangeListener {
     }
 
     public void setMaximum(double maximum) {
+        fireEvent();
         this.maximum = maximum;
     }
 
@@ -88,6 +90,7 @@ public class Threshold extends Label implements OnImagePropertyChangeListener {
     }
 
     public void setTarget(double target) {
+        fireEvent();
         this.target = target;
     }
 }
