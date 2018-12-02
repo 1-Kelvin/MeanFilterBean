@@ -1,4 +1,4 @@
-package Filters;
+package Beans;
 
 import Aufgabe2.MedianFilter;
 import Events.OnImageChangeEvent;
@@ -7,12 +7,11 @@ import pmp.interfaces.IOable;
 
 import javax.media.jai.PlanarImage;
 import javax.media.jai.operator.MedianFilterDescriptor;
-import javax.media.jai.operator.MedianFilterShape;
 import java.awt.*;
 import java.io.StreamCorruptedException;
 import java.util.Vector;
 
-public class MedianBean extends Label implements OnImagePropertyChangeListener, IOable {
+public class Median extends Label implements OnImagePropertyChangeListener, IOable {
 
     PlanarImage planarImageOriginal; //in super class
     PlanarImage planarImageEdited; //in super class
@@ -21,10 +20,10 @@ public class MedianBean extends Label implements OnImagePropertyChangeListener, 
     private MedianFilter medianFilter;
 
 
-    public MedianBean(){
+    public Median(){
         listeners = new Vector<>();
         setText("Median");
-        maskSize = 0;
+        maskSize = 20;
 
         medianFilter = new MedianFilter(MedianFilterDescriptor.MEDIAN_MASK_SQUARE, maskSize, this, this);
     }

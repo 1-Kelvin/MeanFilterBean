@@ -1,19 +1,23 @@
 Manifest-Version: 1.0
 
-Name: Filters/FileChooser.class
+Name: Beans/FileChooser.class
 Java-Bean: true
 
-Name: Filters/PlanarImageConverter.class
+Name: Beans/PlanarImageConverter.class
 Java-Bean: true
 
-Name: Filters/Threshold.class
+Name: Beans/Threshold.class
 Java-Bean: true
 
-Name: Filters/PlanarImageDisplay.class
+Name: Beans/PlanarImageDisplay.class
 Java-Bean: true
 
-Name: Filters/MedianBean.class
+Name: Beans/Median.class
 Java-Bean: true
+
+Name: Beans/ROI.class
+Java-Bean: true
+
 
 
 

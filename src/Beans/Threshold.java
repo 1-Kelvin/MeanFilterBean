@@ -1,17 +1,12 @@
-package Filters;
+package Beans;
 
 import Aufgabe2.ThresholdFilter;
 import Events.OnImageChangeEvent;
 import Listeners.OnImagePropertyChangeListener;
 import pmp.interfaces.IOable;
-import pmp.interfaces.Writeable;
-import pmp.pipes.SimplePipe;
 
-import javax.media.jai.JAI;
 import javax.media.jai.PlanarImage;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.renderable.ParameterBlock;
 import java.io.StreamCorruptedException;
 import java.util.Vector;
 

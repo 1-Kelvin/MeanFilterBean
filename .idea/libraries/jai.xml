@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="jai">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../Systemarchitektur/Übung 2/jai(1)/jai_codec.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../Systemarchitektur/Übung 2/jai(1)/jai_core.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../Systemarchitektur/Übung 2/jai(1)/mlibwrapper_jai.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Systemarchitekturen/Übungen/jai_codec.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Systemarchitekturen/Übungen/jai_core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Systemarchitekturen/Übungen/mlibwrapper_jai.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

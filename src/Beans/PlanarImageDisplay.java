@@ -1,4 +1,4 @@
-package Filters;
+package Beans;
 
 import Events.OnImageChangeEvent;
 import Listeners.OnImagePropertyChangeListener;

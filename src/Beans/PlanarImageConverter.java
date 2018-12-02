@@ -1,4 +1,4 @@
-package Filters;
+package Beans;
 
 import Events.OnFileChangeEvent;
 import Events.OnImageChangeEvent;
