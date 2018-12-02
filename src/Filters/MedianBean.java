@@ -1,52 +1,46 @@
 package Filters;
 
-import Aufgabe2.ThresholdFilter;
+import Aufgabe2.MedianFilter;
 import Events.OnImageChangeEvent;
 import Listeners.OnImagePropertyChangeListener;
 import pmp.interfaces.IOable;
-import pmp.interfaces.Writeable;
-import pmp.pipes.SimplePipe;
 
-import javax.media.jai.JAI;
 import javax.media.jai.PlanarImage;
+import javax.media.jai.operator.MedianFilterDescriptor;
+import javax.media.jai.operator.MedianFilterShape;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.renderable.ParameterBlock;
 import java.io.StreamCorruptedException;
 import java.util.Vector;
 
-public class Threshold extends Label implements OnImagePropertyChangeListener, IOable {
-    private PlanarImage planarImageOriginal;
-    private PlanarImage planarImageEdited;
-    private double minimum;
-    private double maximum;
-    private double target;
+public class MedianBean extends Label implements OnImagePropertyChangeListener, IOable {
+
+    PlanarImage planarImageOriginal; //in super class
+    PlanarImage planarImageEdited; //in super class
     private Vector<OnImagePropertyChangeListener> listeners;
+    private int maskSize;
+    private MedianFilter medianFilter;
 
-    private ThresholdFilter thresholdFilter;
 
-    public Threshold () {
+    public MedianBean(){
         listeners = new Vector<>();
-        setText("Threshold");
-        minimum = 0;
-        maximum = 35;
-        target = 255;
-        setBackground(Color.CYAN);
+        setText("Median");
+        maskSize = 0;
 
-        thresholdFilter = new ThresholdFilter(minimum, maximum, target, this, this);
+        medianFilter = new MedianFilter(MedianFilterDescriptor.MEDIAN_MASK_SQUARE, maskSize, this, this);
     }
+
 
     @Override
     public void onImagePropertyChanged(OnImageChangeEvent event) {
         this.planarImageOriginal = event.getPlanarImage();
-        processThreshold();
+        processMedian();
 
         fireEvent();
     }
 
-    private void processThreshold() {
+    private void processMedian() {
         try {
-            thresholdFilter.write(planarImageOriginal);
+            medianFilter.write(planarImageOriginal);
         } catch (StreamCorruptedException e) {
             e.printStackTrace();
         }
@@ -68,33 +62,13 @@ public class Threshold extends Label implements OnImagePropertyChangeListener, I
         listeners.remove(listener);
     }
 
-    public double getMinimum() {
-        return minimum;
+    public int getMaskSize() {
+        return maskSize;
     }
 
-    public void setMinimum(double minimum) {
-        this.minimum = minimum;
-        processThreshold();
-        fireEvent();
-    }
-
-    public double getMaximum() {
-        return maximum;
-    }
-
-    public void setMaximum(double maximum) {
-        this.maximum = maximum;
-        processThreshold();
-        fireEvent();
-    }
-
-    public double getTarget() {
-        return target;
-    }
-
-    public void setTarget(double target) {
-        this.target = target;
-        processThreshold();
+    public void setMaskSize(int maskSize) {
+        this.maskSize = maskSize;
+        processMedian();
         fireEvent();
     }
 

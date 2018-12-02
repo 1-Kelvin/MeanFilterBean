@@ -12,6 +12,9 @@ Java-Bean: true
 Name: Filters/PlanarImageDisplay.class
 Java-Bean: true
 
+Name: Filters/MedianBean.class
+Java-Bean: true
+
 
 
 
